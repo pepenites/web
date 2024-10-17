@@ -26,7 +26,7 @@ const AdoptionApp = () => {
             <p>Tipo: {pet.tipo}</p>
             <p>Edad: {pet.edad}</p>
             <p>Estado: {pet.estado}</p>
-            <p>Descripción: {pet.desc_personalidad}</p>
+            {/*<p>Descripción: {pet.desc_personalidad}</p>//*/}
             <a href={pet.url}>Ver más</a>
           </div>
         ))}
