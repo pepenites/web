@@ -8,6 +8,11 @@ const PetCard = ({ pet }) => {
       <p><strong>Tipo:</strong> {pet.tipo}</p>
       <p><strong>Edad:</strong> {pet.edad}</p>
       <p><strong>Estado:</strong> {pet.estado === "adopcion" ? "En adopción" : "Adoptado"}</p>
+      
+      {/* Botón para redirigir a los detalles del enlace proporcionado en la API */}
+      <a href={pet.url} target="_blank" rel="noopener noreferrer">
+        <button>Más detalles</button>
+      </a>
     </div>
   );
 };
