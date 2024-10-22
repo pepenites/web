@@ -1,27 +1,13 @@
-// PetCard.js
-import React, { useState } from 'react';
+import React from 'react';
 
 const PetCard = ({ pet }) => {
-  const [showDetails, setShowDetails] = useState(false);
-
-  const toggleDetails = () => {
-    setShowDetails(prevShowDetails => !prevShowDetails);
-  };
-
   return (
     <div className="pet-card">
-      <img src={pet.imagen} alt={pet.nombre} />
-      <h3>{pet.nombre}</h3>
-      <a href={pet.url} target="_blank" rel="noopener noreferrer" onClick={toggleDetails}>
-        {showDetails ? 'Ver menos' : 'Ver más'}
-      </a>
-      {showDetails && (
-        <div className="pet-details">
-          <div dangerouslySetInnerHTML={{ __html: pet.desc_fisica }} />
-          <div dangerouslySetInnerHTML={{ __html: pet.desc_personalidad }} />
-          <div dangerouslySetInnerHTML={{ __html: pet.desc_adicional }} />
-        </div>
-      )}
+      <img src={pet.imagen} alt={pet.nombre} className="pet-image" />
+      <h2>{pet.nombre}</h2>
+      <p><strong>Tipo:</strong> {pet.tipo}</p>
+      <p><strong>Edad:</strong> {pet.edad}</p>
+      <p><strong>Estado:</strong> {pet.estado === "adopcion" ? "En adopción" : "Adoptado"}</p>
     </div>
   );
 };
