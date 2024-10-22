@@ -41,7 +41,7 @@ const AdoptionApp = () => {
 
   return (
     <div>
-      <h1>Adopta un Amigo</h1>
+      <h1>Escoge a tu amigo</h1>
       <FilterBar filters={filters} setFilters={setFilters} />
       <PetList pets={applyFilters()} />
       

@@ -74,60 +74,37 @@ body{
 }
 
 
-
-.pet-card img {
-  width: 150px; /* Cambia a cualquier tamaño que prefieras */
-  height: 150px; /* Mantener la proporción de las imágenes */
-  object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
-}
-
-
-.pet-cards {
-  display: flex;
-  flex-wrap: wrap; /* Permite que las tarjetas se muevan a la siguiente fila si no hay suficiente espacio */
-  justify-content: space-around; /* Espaciado entre las tarjetas */
-}
-
-.pet-card {
-  border: 1px solid #ccc; /* Agrega un borde a las tarjetas */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 10px; /* Espaciado interno */
-  margin: 10px; /* Espaciado externo */
-  text-align: center; /* Centra el texto dentro de la tarjeta */
-}
-
-
-
-.pet-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 300px;
-  margin: 20px;
-  padding: 15px;
-  text-align: center;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.pet-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
 h2 {
   margin: 10px 0;
   color: #333;
 }
 
-/*a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background-color: #28a745;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
+.ver-mas-btn {
+  margin-bottom: 10px; /* Espaciado entre los botones */
 }
+
+.enviar-peticion-btn {
+  margin-top: 20px; /* Espacio entre 'Ver más' y 'Enviar petición' */
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enviar-peticion-btn:hover {
+  background-color: #0056b3;
+}
+
+.enviar-peticion-btn.enviada {
+  background-color: #28a745; /* Cambia el color cuando la petición es enviada */
+}
+
+.enviar-peticion-btn:disabled {
+  cursor: not-allowed;
+}
+
 
 /* App.css */
 .filter-bar {
